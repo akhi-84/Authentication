@@ -1,0 +1,126 @@
+/* Header Styling */
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+    background-color: paleviolet;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.header-fixed .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: red; /* Highlighted green */
+    text-decoration: none;
+}
+
+/* Navigation Links */
+.header-fixed .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Space between links */
+}
+
+.header-fixed .nav-links a {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    padding: 8px 20px; /* Add padding inside each link */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.header-fixed .nav-links a:hover {
+    background-color: #1abc9c; /* Hover effect */
+    color: white;
+}
+
+/* Profile Dropdown */
+.header-fixed .dropdown {
+    position: relative;
+}
+
+.header-fixed .dropdown .dropbtn {
+    background-color: transparent;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.header-fixed .dropdown .dropbtn:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+/* Dropdown Content */
+.header-fixed .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Below the dropdown button */
+    left: 0;
+    background-color: white;
+    min-width: 180px;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1000;
+    text-align: left;
+}
+
+.header-fixed .dropdown-content a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.header-fixed .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show Dropdown on Hover */
+.header-fixed .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-fixed {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+
+    .header-fixed .logo {
+        margin-bottom: 10px;
+    }
+
+    .header-fixed .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px; /* Adjust space for mobile */
+    }
+
+    .header-fixed .dropdown-content {
+        left: 0; /* Align dropdown for mobile */
+        min-width: 100%; /* Make dropdown take full width */
+    }
+}
+
+
