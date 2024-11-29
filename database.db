@@ -1,0 +1,44 @@
+##users table structure:
+
+CREATE TABLE users (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  username varchar(100) NOT NULL,
+  email varchar(100) NOT NULL,
+  password varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+)
+
+##user table structure:
+
+CREATE TABLE user (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  fname varchar(100) NOT NULL,
+  lname varchar(100) NOT NULL,
+  email varchar(100) NOT NULL,
+  password varchar(100) NOT NULL,
+  image varchar(100) NOT NULL,
+  created_at datetime NOT NULL,
+  PRIMARY KEY (id)
+)
+
+##users_tbl table structure:
+
+CREATE TABLE users_tbl (
+  id int(11) NOT NULL,
+  fname varchar(100) NOT NULL,
+  lname varchar(100) NOT NULL,
+  email varchar(100) NOT NULL,
+  mobile varchar(100) NOT NULL,
+  images longtext NOT NULL,
+  UNIQUE KEY email (email)
+)
+
+##categories table structure:
+
+CREATE TABLE categories (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  category_name varchar(255) NOT NULL,
+  description text NOT NULL,
+  image varchar(255) NOT NULL,
+  PRIMARY KEY (id)
+)
